@@ -27,7 +27,7 @@ namespace AsyncTests
             if(InputBox.Text.Replace(" ", string.Empty) != string.Empty)
             {
                 var ResponseBody = GetDataFromApi(InputBox.Text.Replace(" ", string.Empty));
-                ClearData();
+                await ClearData();
                 InputBox.Text = "";
                 await ResponseBody;
 
@@ -77,17 +77,18 @@ namespace AsyncTests
             }
             else
             {
-                ClearData();
+                await ClearData();
             }
         }
 
-        public async Task ClearData()
+        public Task ClearData()
         {
             EntryNameBox.Text = string.Empty;
             DescriptionBox.Text = string.Empty;
             HyperL.Inlines.All(x => HyperL.Inlines.Remove(x));
             HyperL.NavigateUri = null;
             ManualVerBox.Text = "";
+            return Task.CompletedTask;
         }
     }
 }
