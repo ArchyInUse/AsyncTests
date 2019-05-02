@@ -35,7 +35,7 @@ namespace AsyncTests
             }
             else
             {
-                ClearData();
+                await ClearData();
                 StateBox.Text = "Error - Input cannot be empty.";
             }
         }
@@ -44,28 +44,24 @@ namespace AsyncTests
         // Returns null if no manual found, otherwise returns a ResponseBody
         private async Task<ResponseType> GetDataFromApi(string Entry)
         {
-            string responseBody;
+            HttpResponseMessage response;
             using (HttpClient Client = new HttpClient())
             {
-                try
-                {
-                    responseBody = await Client.GetStringAsync(BaseUrl + Entry);
-                }
-                catch(Exception)
-                {
-                    StateBox.Text = "Error - Not found.";
-                    responseBody = null;
-                }
+                response = await Client.GetAsync(BaseUrl + Entry);
             }
 
-            if(responseBody != null)
+            if (response.IsSuccessStatusCode)
             {
                 StateBox.Text = "Success";
 
-                return JsonConvert.DeserializeObject<ResponseType>(responseBody);
+                return JsonConvert.DeserializeObject<ResponseType>(await response.Content.ReadAsStringAsync());
             }
+            else
+            {
+                StateBox.Text = "Error - Not found.";
 
-            return null;
+                return null;
+            }
         }
 
         private async Task SortData(ResponseType Response)
@@ -85,7 +81,7 @@ namespace AsyncTests
             }
         }
 
-        public void ClearData()
+        public async Task ClearData()
         {
             EntryNameBox.Text = string.Empty;
             DescriptionBox.Text = string.Empty;
