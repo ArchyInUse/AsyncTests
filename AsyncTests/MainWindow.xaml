@@ -1,0 +1,118 @@
+﻿<Window x:Class="AsyncTests.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AsyncTests"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!-- Start Request -->
+        <Button x:Name="Button"
+                Grid.Column="4"
+                Grid.ColumnSpan="2"
+                Grid.Row="3" Content="Start Async Request"
+                FontSize="15" Click="Button_Click"/>
+
+        <!-- Input -->
+        <StackPanel Grid.Column="4"
+                    Grid.Row="2"
+                    Grid.ColumnSpan="2">
+            
+            <!-- Input Text Box-->
+            <TextBlock Text="Input"
+                     TextAlignment="Center"/>
+
+            <TextBox Height="37" x:Name="InputBox"/>
+
+        </StackPanel>
+
+        <!-- Entry Name -->
+        <TextBlock Grid.Column="0"
+                 TextAlignment="Center"
+                 VerticalAlignment="Center"
+                 Text="Entry: "/>
+
+        <TextBlock Grid.Column="1"
+                   VerticalAlignment="Center"
+                   Grid.ColumnSpan="2"
+                   x:Name="EntryNameBox"/>
+
+        <!-- Description-->
+        <TextBlock Grid.Column="0"
+                   Grid.Row="1"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Text="Description:"/>
+        
+        <TextBlock Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="1"
+                   TextWrapping="Wrap"
+                   x:Name="DescriptionBox"/>
+
+        
+        <!-- Full Reference Link -->
+        <TextBlock Grid.Column="0"
+                   Grid.Row="2"
+                   Text="Reference:"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
+
+        <TextBlock Grid.Column="1"
+                   Grid.Row="2"
+                   HorizontalAlignment="Left"
+                   Grid.ColumnSpan="3"
+                   TextWrapping="WrapWithOverflow"
+                   Grid.RowSpan="2">
+            <Hyperlink x:Name="HyperL" NavigateUri="None"></Hyperlink>
+        </TextBlock>
+        
+        
+        <!-- Version -->
+        <TextBlock Grid.Column="0"
+                   Grid.Row="3"
+                   Text="Manual Ver:"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"/>
+
+        <TextBlock Grid.ColumnSpan="2"
+                   Grid.Column="1"
+                   Grid.Row="3"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   x:Name="ManualVerBox"/>
+
+        <!-- TESTING BOX -->
+        <TextBlock Grid.Column="0"
+                   Grid.Row="5"
+                   Text="Result:"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"/>
+
+        <TextBlock x:Name="StateBox"
+                 Grid.Column="1"
+                 Grid.Row="5"
+                 Text=""
+                 VerticalAlignment="Center"
+                 Grid.ColumnSpan="3"/>
+    </Grid>
+</Window>

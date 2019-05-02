@@ -1,0 +1,16 @@
+C:\Users\Gilad\source\repos\AsyncTests\AsyncTests\bin\Debug\AsyncTests.exe.config
+C:\Users\Gilad\source\repos\AsyncTests\AsyncTests\bin\Debug\AsyncTests.exe
+C:\Users\Gilad\source\repos\AsyncTests\AsyncTests\bin\Debug\AsyncTests.pdb
+C:\Users\Gilad\source\repos\AsyncTests\AsyncTests\obj\Debug\AsyncTests.csprojResolveAssemblyReference.cache
+C:\Users\Gilad\source\repos\AsyncTests\AsyncTests\obj\Debug\MainWindow.g.cs
+C:\Users\Gilad\source\repos\AsyncTests\AsyncTests\obj\Debug\App.g.cs
+C:\Users\Gilad\source\repos\AsyncTests\AsyncTests\obj\Debug\AsyncTests_MarkupCompile.cache
+C:\Users\Gilad\source\repos\AsyncTests\AsyncTests\obj\Debug\AsyncTests_MarkupCompile.lref
+C:\Users\Gilad\source\repos\AsyncTests\AsyncTests\obj\Debug\MainWindow.baml
+C:\Users\Gilad\source\repos\AsyncTests\AsyncTests\obj\Debug\AsyncTests.g.resources
+C:\Users\Gilad\source\repos\AsyncTests\AsyncTests\obj\Debug\AsyncTests.Properties.Resources.resources
+C:\Users\Gilad\source\repos\AsyncTests\AsyncTests\obj\Debug\AsyncTests.csproj.GenerateResource.Cache
+C:\Users\Gilad\source\repos\AsyncTests\AsyncTests\obj\Debug\AsyncTests.csproj.CoreCompileInputs.cache
+C:\Users\Gilad\source\repos\AsyncTests\AsyncTests\obj\Debug\AsyncTests.exe
+C:\Users\Gilad\source\repos\AsyncTests\AsyncTests\obj\Debug\AsyncTests.pdb
+C:\Users\Gilad\source\repos\AsyncTests\AsyncTests\bin\Debug\Newtonsoft.Json.dll
